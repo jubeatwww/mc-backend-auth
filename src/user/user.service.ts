@@ -25,4 +25,13 @@ export class UserService implements IUserService {
             return await this.userReposity.save(u);
         }
     }
+
+    public async findOne(username: string): Promise<User> {
+        const user = await this.userReposity.findOne({ username });
+
+        if (user) {
+            return user;
+        }
+        throw new UserException(ErrorType.USER_NOT_EXISTS);
+    }
 }

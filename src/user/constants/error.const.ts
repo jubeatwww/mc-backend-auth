@@ -15,4 +15,10 @@ export const ErrorMessages: IErrorMessages = {
         errorMessage: 'User exists',
         userMessage: 'Username exists',
     },
+    [ErrorType.USER_NOT_EXISTS]: {
+        type: ErrorType.USER_NOT_EXISTS,
+        httpStatus: HttpStatus.FORBIDDEN,
+        errorMessage: 'User not exists',
+        userMessage: 'Username not found',
+    },
 };
