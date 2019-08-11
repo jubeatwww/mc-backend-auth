@@ -11,7 +11,7 @@ export class UserExceptionFilter implements ExceptionFilter {
 
         if (e instanceof HttpException) {
             res.status(e.getStatus()).json({
-                statusCode: status,
+                statusCode: e.getStatus(),
                 timestamp: new Date().toISOString(),
                 path: req.url,
             });

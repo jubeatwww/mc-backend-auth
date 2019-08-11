@@ -29,7 +29,6 @@ export class User {
 
     @Column({
         length: 250,
-        select: false,
         name: 'password',
     })
     public passwordHash: string;
