@@ -16,8 +16,8 @@ import { Request, Response } from 'express';
 import { UserService } from '../user/user.service';
 import { CreateUserDto } from '../user/dto/create-user.dto';
 import { UserExceptionFilter } from '../user/errors/user.filter';
-import { LoginGuard } from './login.guard';
-import { AuthGuard } from './auth.guard';
+import { LoginGuard } from './guards/login.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 @Controller()
 @UseFilters(UserExceptionFilter)
