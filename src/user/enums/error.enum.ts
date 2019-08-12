@@ -1,0 +1,5 @@
+export const enum ErrorType {
+    USER_EXISTS = 'USER_EXISTS',
+    INFO_REQUIRED = 'INFO_REQUIRED',
+    USER_NOT_EXISTS = 'USER_NOT_EXISTS',
+}
